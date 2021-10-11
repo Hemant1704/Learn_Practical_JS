@@ -5,3 +5,4 @@ This github repo is to learn javascript easily from basics.
 2. Functions.js
 3. Objects.js
 4. Arrays.js
+5. Strings.js
