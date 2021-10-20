@@ -17,6 +17,32 @@ a) create:
  if the file does not exist it creates a new file.
 
  iii) fs.appendFileSync("abc.txt","add this to data") ==> same as upper one just it adds content instead of replacing
- iv) fs.mkdirSync ("myDirectory")
+  
 
-*/
+  For folders
+  i) to create we use fs.mkdirSync ("myDirectory");
+  ii) To remove 
+  first use readdirSync() it gives us all the content inside the folder in form of array
+  Removing folder meri directory
+  let content = readdirSync();
+  for(let i=0;i<content.length;i++){
+    Remove file one by one using unlink sync
+    fs.unlinkSync("meridirectory/"+content[i]);
+  }
+  fs.rmdirSync("meridirectory");
+  Now the folder is removed.
+  
+  iii) To check if a file exists at any location fs.existSync() ==> returns boolean value
+
+  */
+
+  // let us do a code to which makes 10 folders and eeach folder having its own readme file which contains content related to it.
+
+  for(let i=0;i<10;i++){
+      let pathTomake = `Lecture-${i}`;
+      // make folder for the lecture
+    fs.mkdirSync(pathTomake);
+
+    // creating readme file and putting content in it.
+    fs.writeFileSync(pathTomake+"\\"+"readme.md",`# readme for lecture ${i}`);
+  }
