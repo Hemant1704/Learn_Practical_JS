@@ -50,3 +50,5 @@ console.log(name);
 name = path.basename(path.join(__dirname,"abc.js"));
 // will print abc.js as it is the last location
 console.log(name);
+
+// Now using all the above concepts till now we are going to make a mini project next.
