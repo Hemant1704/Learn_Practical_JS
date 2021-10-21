@@ -10,6 +10,7 @@ let buffer = fs.readFileSync("os.js");
 console.log("bin data "+buffer);
 
 /*
+WE are going to learn both about files and folders in this
 files ==> [create,read,update,delete]
 a) create:
  i) fs.openSync("myfile.txt","w");  ==> creates an empty file in writing mode
